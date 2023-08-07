@@ -14,6 +14,7 @@ type Comment @model @search {
   body: String!
   likes: Int @default(value: 0)
   author: User
+  vote: [Vote]
 }
 
 type User @model {
@@ -21,4 +22,9 @@ type User @model {
   email: Email
   posts: [Post]
   comments: [Comment]
+}
+
+type Vote @model {
+  user: User
+  vote: Int @default(value: 0)
 }
