@@ -1,0 +1,16 @@
+{
+  "name": "grafbase-hackathon",
+  "version": "1.0.0",
+  "description": "A tool used for generating instant apis by just connecting mongoDB and grafbase",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon server.js"
+  },
+  "author": "vishesh baghel",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "nodemon": "^3.0.1"
+  }
+}
