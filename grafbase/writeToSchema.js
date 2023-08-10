@@ -2,11 +2,10 @@ const fs = require("fs");
 const { printSchema } = require("graphql");
 const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require("graphql");
 
-// Define types
 const UserType = new GraphQLObjectType({
   name: "User",
   fields: {
-    id: { type: GraphQLString },
+    id: { type: GraphQLString, resolve: () => "hello" },
     name: { type: GraphQLString },
     email: { type: GraphQLString },
   },
@@ -22,20 +21,18 @@ const QueryType = new GraphQLObjectType({
   },
 });
 
-// Create schema object
 const schema = new GraphQLSchema({
-  // query: QueryType,
+  query: QueryType,
   user: UserType,
 });
 
-// const schemaObject = UserType;
-
-// Convert schema to string
 const schemaString = printSchema(schema);
 
-const content = schemaString;
+const content = "\n" + schemaString + "\n";
 
-fs.writeFileSync("schema.graphql", content, { flag: "a+" }, (err) => {
+const path = "./grafbase/schema.graphql";
+
+fs.writeFile(path, content, { flag: "a+" }, (err) => {
   if (err) {
     throw err;
   }

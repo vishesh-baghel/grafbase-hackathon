@@ -28,3 +28,11 @@ type Vote @model {
   user: User
   vote: Int @default(value: 0)
 }
+
+type Query {
+  hello: String
+}
+
+type Query {
+  hello: String
+}
