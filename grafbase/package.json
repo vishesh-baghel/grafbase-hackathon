@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "child_process": "^1.0.2",
+    "file-system": "^2.2.2",
+    "graphql": "^16.7.1",
     "nodemon": "^3.0.1"
   }
 }

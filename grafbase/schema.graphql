@@ -28,3 +28,18 @@ type Vote @model {
   user: User
   vote: Int @default(value: 0)
 }
+
+type Car @model {
+  user: User
+  vote: Int @default(value: 0)
+}
+
+type Carss @model {
+  user: User
+  vote: Int @default(value: 0)
+}
+
+type Carssd @model {
+  user: User
+  vote: Int @default(value: 0)
+}
