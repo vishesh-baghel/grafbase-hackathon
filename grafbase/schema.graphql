@@ -29,10 +29,17 @@ type Vote @model {
   vote: Int @default(value: 0)
 }
 
-type Query {
-  hello: String
+type Car @model {
+  user: User
+  vote: Int @default(value: 0)
 }
 
-type Query {
-  hello: String
+type Carss @model {
+  user: User
+  vote: Int @default(value: 0)
+}
+
+type Carssd @model {
+  user: User
+  vote: Int @default(value: 0)
 }
